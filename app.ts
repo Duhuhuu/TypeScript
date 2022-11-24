@@ -3,15 +3,15 @@
 
 //Declaracion de variables con su tipo de datos... Se declara el tipo de dato poniendo el ":{TipoDeDato}" 
 // :number - :string - :boolean - Etc...
-const a:number = 10;
+// const a:number = 10;
 
-// const a = 10; // Declaracion de variable sin declarar el tipo y el tipo esta inferido por Ts
+// // const a = 10; // Declaracion de variable sin declarar el tipo y el tipo esta inferido por Ts
 
 
-// let b:number = 10;
-//Otra forma de declarar variables, solamente declarando el tipo y luego asignandole el valor a la variable.
-let b:number;
-b= 3.1416;
+// // let b:number = 10;
+// //Otra forma de declarar variables, solamente declarando el tipo y luego asignandole el valor a la variable.
+// let b:number;
+// b= 3.1416;
 
 /*
 Declaracion de tipo de variable con el Famoso tipo ANY.
@@ -23,6 +23,12 @@ b = {};
 b = [];
 */
 
+(()=>{
+
+    const a:number = 10;
+    console.log(a);
+
+})()
 
 
 
