@@ -1,40 +1,47 @@
-//tsc -w : modo watch
+(() => {
 
+    // Tipos
+    const batman:string = 'Bruce';
+    const superman:string = 'Clark';
+  
+    const existe:boolean = false;
+  
+    // Tuplas
+    const parejaHeroes:[string, string] = [batman,superman]
 
-//Declaracion de variables con su tipo de datos... Se declara el tipo de dato poniendo el ":{TipoDeDato}" 
-// :number - :string - :boolean - Etc...
-// const a:number = 10;
-
-// // const a = 10; // Declaracion de variable sin declarar el tipo y el tipo esta inferido por Ts
-
-
-// // let b:number = 10;
-// //Otra forma de declarar variables, solamente declarando el tipo y luego asignandole el valor a la variable.
-// let b:number;
-// b= 3.1416;
-
-/*
-Declaracion de tipo de variable con el Famoso tipo ANY.
-Con Any la variable puede ser cualquier tipo de dato. int, bool, string, double, array, object, etc..
-
-let b;
-b= 3.1416;
-b = {};
-b = [];
-*/
-
-(()=>{
-
-    const a:number = 10;
-    console.log(a);
-
-})()
-
-
-
-
-
-
-
-
-
+    const villano:[string, number, boolean] = ['Lex Lutor',5,true];
+  
+    // Arreglos
+    const aliados:string[] = ['Mujer Maravilla','Acuaman','San', 'Flash'];
+  
+    //Enumeraciones
+    enum fuerzas{
+    Acuaman = 0,
+    Batman = 1,
+    Flash = 5,
+    Superman = 100
+    }
+    const fuerzaFlash:fuerzas = fuerzas.Flash;
+    const fuerzaSuperman:fuerzas = fuerzas.Superman;
+    const fuerzaBatman:fuerzas = fuerzas.Batman;
+    const fuerzaAcuaman:fuerzas = fuerzas.Acuaman;
+  
+    // Retorno de funciones
+    function activar_batiseñal():string{
+      return 'activada';
+    }
+  
+    function pedir_ayuda():void {
+      console.log('Auxilio!!!');
+      return;
+    }
+  
+    // Aserciones de Tipo
+    const poder: any = '100';
+    const largoDelPoder:number = (poder as string).length;
+    console.log( largoDelPoder );
+  
+  
+  })()
+  
+  
