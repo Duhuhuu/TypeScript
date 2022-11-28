@@ -1,36 +1,46 @@
 "use strict";
-(() => {
-    // Tipos
-    const batman = 'Bruce';
-    const superman = 'Clark';
-    const existe = false;
-    // Tuplas
-    const parejaHeroes = [batman, superman];
-    const villano = ['Lex Lutor', 5, true];
-    // Arreglos
-    const aliados = ['Mujer Maravilla', 'Acuaman', 'San', 'Flash'];
-    //Enumeraciones
-    let fuerzas;
-    (function (fuerzas) {
-        fuerzas[fuerzas["Acuaman"] = 0] = "Acuaman";
-        fuerzas[fuerzas["Batman"] = 1] = "Batman";
-        fuerzas[fuerzas["Flash"] = 5] = "Flash";
-        fuerzas[fuerzas["Superman"] = 100] = "Superman";
-    })(fuerzas || (fuerzas = {}));
-    const fuerzaFlash = fuerzas.Flash;
-    const fuerzaSuperman = fuerzas.Superman;
-    const fuerzaBatman = fuerzas.Batman;
-    const fuerzaAcuaman = fuerzas.Acuaman;
-    // Retorno de funciones
-    function activar_batiseñal() {
-        return 'activada';
+// Objetos
+const batimovil = {
+    carroceria: "Negra",
+    modelo: "6x6",
+    antibalas: true,
+    pasajeros: 4
+};
+const bumblebee = {
+    carroceria: "Amarillo con negro",
+    modelo: "4x2",
+    antibalas: true,
+    pasajeros: 4,
+    disparar() {
+        console.log("Disparando");
     }
-    function pedir_ayuda() {
-        console.log('Auxilio!!!');
-        return;
-    }
-    // Aserciones de Tipo
-    const poder = '100';
-    const largoDelPoder = poder.length;
-    console.log(largoDelPoder);
-})();
+};
+let villanos;
+// Villanos debe de ser un arreglo de objetos personalizados
+villanos = [{
+        nombre: "Lex Luthor",
+        edad: 54,
+        mutante: false
+    }, {
+        nombre: "Erik Magnus Lehnsherr",
+        edad: 49,
+        mutante: true
+    }, {
+        nombre: "James Logan",
+        edad: undefined,
+        mutante: true
+    }];
+// Multiples tipos
+// cree dos tipos, uno para charles y otro para apocalipsis
+let charles = {
+    poder: "psiquico",
+    estatura: 1.78
+};
+let apocalipsis = {
+    lider: true,
+    miembros: ["Magneto", "Tormenta", "Psylocke", "Angel"]
+};
+// Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
+let mystique;
+mystique = charles;
+mystique = apocalipsis;
