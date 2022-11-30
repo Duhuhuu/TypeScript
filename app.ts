@@ -5,7 +5,7 @@ type autoMoviles = {
   modelo: string,
   antibalas: boolean,
   pasajeros:number,
-  disparar?: () => { }
+  disparar?: () => void
 
 }
 
@@ -62,12 +62,12 @@ type apocalipsis = {
 
 // Multiples tipos
 // cree dos tipos, uno para charles y otro para apocalipsis
-let charles = {
+let charles:charles = {
   poder:"psiquico",
   estatura: 1.78
 };
 
-let apocalipsis = {
+let apocalipsis:apocalipsis = {
   lider:true,
   miembros: ["Magneto","Tormenta","Psylocke","Angel"]
 }
@@ -75,6 +75,25 @@ let apocalipsis = {
 
 // Mystique, debe poder ser cualquiera de esos dos mutantes (charles o apocalipsis)
 let mystique: (charles | apocalipsis);
-
+console.log(apocalipsis)
 mystique = charles;
 mystique = apocalipsis;
+
+
+// const suma = (event) =>{
+
+//   console.log({event})
+//   // const {  } = event
+//   let num:number = numero;
+//   let sum:number = 1
+//   let result:number = 0
+
+//   for (let i = 0; i < 10; i++) {
+//       result = num * sum
+//       sum = sum + 1
+//       console.log(result)
+//   }
+
+
+
+// }

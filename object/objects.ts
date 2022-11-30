@@ -18,7 +18,7 @@
             return this.name
         }
     }
-    console.log( flash.getName() )
+    // console.log( flash.getName() )
 })()
 
 
