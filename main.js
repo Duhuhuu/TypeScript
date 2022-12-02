@@ -1,4 +1,43 @@
 "use strict";
+let numbersList = [];
+const divisible = (x) => {
+    const xTwo = 2;
+    let numero = x;
+    if (Number.isInteger(numero / xTwo)) {
+        console.log('Si se puede dividir entre dos', numero);
+        let result = numero / xTwo;
+        alert(`El numero: ${numero} Si se puede dividir entre 2 y su resultado es: ${result}`);
+    }
+    else {
+        console.log(`El numero ${numero} No se puede divir entre 2`);
+        alert(`El numero: ${numero} No se puede dividir entre 2 !!`);
+    }
+};
+const sumNum = (x) => {
+    let count = 9;
+    let suma = [];
+    let totalSum = 0;
+    suma = [...x];
+    for (let i = 0; i < count; i++) {
+        totalSum = suma[i] + suma[i + 1];
+        count = count - 1;
+    }
+    if (totalSum <= 100) {
+        alert(`Entro exitosamente y La suma es: ${totalSum}`);
+    }
+    else {
+        alert(`No entro exitosamente la suma es: ${totalSum}. Tiene que ser 100!! `);
+    }
+};
+(() => {
+    let numero = prompt('Dame un numero');
+    divisible(numero);
+    for (let i = 0; i < 9; i++) {
+        let numerosuma = prompt('Dame un numero');
+        numbersList[i] = numerosuma;
+    }
+    sumNum(numbersList);
+})();
 const numbers = [5, 6, 7, 6, 5, 4, 9, 80, 2, 1, 6];
 let contador = 14;
 const ordenAscendente = (nmeros) => {
@@ -63,4 +102,19 @@ const RepitNumbers = (nmeros) => {
         console.log('maurito');
     };
 })();
+
+const Vehiculo = {
+    name: 'Super Bochito y tuneado',
+    sucolor: 'red',
+    placa: '2312s2',
+    year: 2022,
+    model: 'bochito',
+    family: 'volkswagen',
+    getName() {
+        return this.name;
+    },
+    getModelFamily() {
+        return this.name, this.family;
+    },
+};
 //# sourceMappingURL=main.js.map
